@@ -34,7 +34,7 @@ $this->breadcrumbs = array($this->pageTitle);
         <th class="text-center">排序</th>
         <th class="text-center">ID</th>
         <th class="text-center">标题</th>
-        <th class="text-center">who请客</th>
+        <!-- <th class="text-center">who请客</th> -->
         <th class="text-center">地点</th>
         <th class="text-center">聚会时间</th>
         <!-- <th class="text-center">添加时间</th> -->
@@ -50,7 +50,6 @@ $this->breadcrumbs = array($this->pageTitle);
                 data-id="<?php echo $v['id'] ?>"><?php echo $v['sort'] ?></td>
             <td style="text-align:center;vertical-align: middle"><?php echo $v->id; ?></td>
             <td class="text-center"><?=$v->title?></td>
-            <td class="text-center"><?=$v->pay_user->name?></td>
             <td class="text-center"><?=$v->place?></td>
             <td class="text-center"><?=date('Y-m-d',$v->time)?></td>
             <!-- <td class="text-center"><?=date('Y-m-d',$v->updated)?></td> -->

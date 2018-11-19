@@ -15,7 +15,7 @@ $this->breadcrumbs = array('资讯管理', $this->pageTitle);
         'print','preview','searchreplace']]")); ?>
 <?php $form = $this->beginWidget('HouseForm', array('htmlOptions' => array('class' => 'form-horizontal'))) ?>
 <div class="form-group">
-    <label class="col-md-2 control-label">标题<span class="required" aria-required="true">*</span></label>
+    <label class="col-md-2 control-label">电影名<span class="required" aria-required="true">*</span></label>
     <div class="col-md-4">
         <?php echo $form->textField($article, 'title', array('class' => 'form-control')); ?>
     </div>
@@ -29,7 +29,7 @@ $this->breadcrumbs = array('资讯管理', $this->pageTitle);
     <div class="col-md-2"><?php echo $form->error($article, 'place') ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label text-nowrap">聚会时间</label>
+    <label class="col-md-2 control-label text-nowrap">时间</label>
     <div class="col-md-4">
         <div class="input-group date form_datetime" >
             <?php echo $form->textField($article,'time',array('class'=>'form-control','value'=>($article->time?date('Y-m-d',$article->time):''))); ?>
@@ -44,13 +44,13 @@ $this->breadcrumbs = array('资讯管理', $this->pageTitle);
     </div>
     <div class="col-md-12"></div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <label class="col-md-2 control-label">who请客</label>
     <div class="col-md-4">
         <?php echo $form->dropDownList($article, 'payer', CHtml::listData(TagExt::model()->findAll('cate="name"'),'id','name'), array('class' => 'form-control', 'encode' => false)); ?>
     </div>
     <div class="col-md-2"><?php echo $form->error($article, 'payer') ?></div>
-</div>
+</div> -->
 <!-- <div class="form-group">
     <label class="col-md-2 control-label">栏目</label>
     <div class="col-md-4">
